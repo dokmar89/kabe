@@ -1,47 +1,47 @@
-# IT knowledge base — compact prototype
+# IT znalostní báze — menší prototyp
 
-A React/TypeScript support knowledge base with article views, administration and an email-signature utility.
+Znalostní báze v Reactu a TypeScriptu s články, administrací a nástrojem pro e-mailové podpisy.
 
-**Status:** Legacy/parallel knowledge-base variant; `skolap` is the selected portfolio reference for the broader support portal.
+**Stav:** Starší/souběžná varianta znalostní báze; hlavní ukázkou širšího portálu podpory je `skolap`.
 
-## Scope
+## Co projekt obsahuje
 
-- Article browsing and administration screens.
-- Setup and sign-in UI.
-- Signature generator and Supabase-backed service modules.
+- Prohlížení článků a administrační stránky.
+- Rozhraní nastavení a přihlášení.
+- Generátor podpisů a datové služby Supabase.
 
-## Technology
+## Technologie
 
 React, TypeScript, Vite, Supabase.
 
-## Architecture and source map
+## Architektura a struktura
 
-- `pages/` — article, setup and administration screens
-- `services/api.ts` — data-service methods
-- `lib/supabase.ts` — configurable database client
-- `db_schema.sql` — database schema
+- `pages/` — články, nastavení a administrace
+- `services/api.ts` — metody datových služeb
+- `lib/supabase.ts` — nastavitelný databázový klient
+- `db_schema.sql` — databázové schéma
 
-## Local development
+## Lokální vývoj
 
-Requires Node.js and npm. From the repository root:
+Potřebujete Node.js a npm. V kořenové složce repozitáře spusťte:
 
 ```sh
 npm install
 npm run dev
 ```
 
-Build command declared by this checkout: `npm run build`.
+Příkaz pro sestavení uvedený v projektu: `npm run build`.
 
-These are the repository scripts, not a claim of a passing build. Dependency installation, build and live integrations were not executed during the documentation review.
+Jde o příkazy deklarované v repozitáři, nikoli o potvrzení úspěšného sestavení. Instalace závislostí, sestavení ani napojení na živé služby nebyly při úpravě dokumentace spuštěny.
 
-## Configuration and limitations
+## Konfigurace a omezení
 
-The Supabase configuration flow stores client configuration locally. Use only browser-safe project credentials and enforce authorization through database policies. Apply the schema only to a separate test project after review.
+Nastavení klienta Supabase se ukládá lokálně. Používejte pouze údaje určené pro prohlížeč a oprávnění vynucujte databázovými politikami. Schéma po kontrole aplikujte pouze do samostatného testovacího projektu.
 
-## Portfolio relevance
+## Přínos pro portfolio
 
-Shows how repeated support tasks can be collected into a reusable internal tool.
+Ukazuje soustředění opakovaných úloh IT podpory do společného nástroje.
 
-## Documentation next steps
+## Co doplnit do dokumentace
 
-Capture screenshots using synthetic data, document a reproducible test run, and record which integrations have been verified. Keep credentials and deployment-specific configuration outside version control.
+Snímky obrazovky s fiktivními daty, opakovatelný postup ověření a přehled skutečně otestovaných integrací. Přihlašovací údaje a konfigurace konkrétního nasazení patří mimo Git.
