@@ -1,20 +1,47 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+# IT knowledge base — compact prototype
 
-# Run and deploy your AI Studio app
+A React/TypeScript support knowledge base with article views, administration and an email-signature utility.
 
-This contains everything you need to run your app locally.
+**Status:** Legacy/parallel knowledge-base variant; `skolap` is the selected portfolio reference for the broader support portal.
 
-View your app in AI Studio: https://ai.studio/apps/drive/1JJSvZ0Pw0jnEHR0pX6ahhBvwAWbawO9V
+## Scope
 
-## Run Locally
+- Article browsing and administration screens.
+- Setup and sign-in UI.
+- Signature generator and Supabase-backed service modules.
 
-**Prerequisites:**  Node.js
+## Technology
 
+React, TypeScript, Vite, Supabase.
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+## Architecture and source map
+
+- `pages/` — article, setup and administration screens
+- `services/api.ts` — data-service methods
+- `lib/supabase.ts` — configurable database client
+- `db_schema.sql` — database schema
+
+## Local development
+
+Requires Node.js and npm. From the repository root:
+
+```sh
+npm install
+npm run dev
+```
+
+Build command declared by this checkout: `npm run build`.
+
+These are the repository scripts, not a claim of a passing build. Dependency installation, build and live integrations were not executed during the documentation review.
+
+## Configuration and limitations
+
+The Supabase configuration flow stores client configuration locally. Use only browser-safe project credentials and enforce authorization through database policies. Apply the schema only to a separate test project after review.
+
+## Portfolio relevance
+
+Shows how repeated support tasks can be collected into a reusable internal tool.
+
+## Documentation next steps
+
+Capture screenshots using synthetic data, document a reproducible test run, and record which integrations have been verified. Keep credentials and deployment-specific configuration outside version control.
